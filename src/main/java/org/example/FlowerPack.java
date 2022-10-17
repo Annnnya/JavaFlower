@@ -5,15 +5,15 @@ import lombok.Setter;
 
 @Getter@Setter
 public class FlowerPack {
-    public Flower flower;
-    public int quantity;
+    private Flower flower;
+    private int quantity;
 
-    public <T extends Flower> FlowerPack(T fl, int qua){
+    public <T extends Flower> FlowerPack(T fl, int qua) {
         setFlower(fl);
         setQuantity(qua);
     }
 
-    public int getPrice(){
-        return (int)flower.getPrice()*quantity;
+    public int getPrice() {
+        return (int) flower.getPrice()*quantity;
     }
 }
